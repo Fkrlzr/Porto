@@ -1,0 +1,16 @@
+<!-- SVG Placeholder for PicVerse Project -->
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#bg)"/>
+  <text x="200" y="100" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">PicVerse</text>
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="14" fill="#87CEEB" text-anchor="middle" dominant-baseline="middle">Image Gallery Platform</text>
+  <circle cx="80" cy="60" r="8" fill="#87CEEB" opacity="0.8"/>
+  <circle cx="320" cy="60" r="6" fill="#4A90E2" opacity="0.6"/>
+  <circle cx="80" cy="140" r="5" fill="#5DADE2" opacity="0.7"/>
+  <circle cx="320" cy="140" r="7" fill="#87CEEB" opacity="0.5"/>
+</svg>
