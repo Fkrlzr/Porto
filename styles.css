@@ -279,6 +279,10 @@ body {
   font-size: 4rem;
   color: white;
   box-shadow: 0 20px 40px var(--shadow-dark);
+  background-image: url('profile.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
 /* Section Styles */
