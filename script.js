@@ -19,12 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
     updateThemeIcon(newTheme);
-
-    // Add transition effect
-    themeToggle.style.transform = "rotate(360deg)";
-    setTimeout(() => {
-      themeToggle.style.transform = "rotate(0deg)";
-    }, 300);
   });
 
   // Update theme icon based on current theme
