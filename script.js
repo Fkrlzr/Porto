@@ -1,34 +1,8 @@
-// Theme Toggle Functionality
+// Main interactions
 document.addEventListener("DOMContentLoaded", function () {
-  const themeToggle = document.getElementById("theme-toggle");
-  const themeIcon = themeToggle.querySelector("i");
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
-
-  // Check for saved theme preference or default to light mode
-  const currentTheme = localStorage.getItem("theme") || "light";
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  updateThemeIcon(currentTheme);
-
-  // Theme toggle event listener
-  themeToggle.addEventListener("click", function () {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    updateThemeIcon(newTheme);
-  });
-
-  // Update theme icon based on current theme
-  function updateThemeIcon(theme) {
-    if (theme === "dark") {
-      themeIcon.className = "fas fa-sun";
-    } else {
-      themeIcon.className = "fas fa-moon";
-    }
-  }
 
   // Mobile menu toggle
   hamburger.addEventListener("click", function () {
@@ -86,15 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     if (window.scrollY > 50) {
-      navbar.style.background =
-        document.documentElement.getAttribute("data-theme") === "dark"
-          ? "rgba(15, 20, 25, 0.98)"
-          : "rgba(255, 255, 255, 0.98)";
+      navbar.style.background = "rgba(247, 247, 243, 0.98)";
     } else {
-      navbar.style.background =
-        document.documentElement.getAttribute("data-theme") === "dark"
-          ? "rgba(15, 20, 25, 0.95)"
-          : "rgba(255, 255, 255, 0.95)";
+      navbar.style.background = "rgba(247, 247, 243, 0.95)";
     }
   });
 
