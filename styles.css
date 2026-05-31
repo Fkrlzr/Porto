@@ -297,14 +297,21 @@ h4 {
 }
 
 .btn-secondary {
+  background: var(--primary-color);
+  color: #f7f7f3;
+  border: 2px solid var(--primary-color);
+}
+
+.btn-cv {
   background: #ffffff;
   color: var(--text-primary);
-  border: 2px solid var(--text-primary);
+  border-color: #000000;
 }
 
 .btn-secondary:hover {
   background: var(--text-primary);
   color: var(--background-color);
+  border-color: transparent;
   transform: translate(-2px, -2px);
   box-shadow: 8px 8px 0 var(--shadow-strong);
 }
