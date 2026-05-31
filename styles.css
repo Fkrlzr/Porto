@@ -297,7 +297,7 @@ h4 {
 }
 
 .btn-secondary {
-  background: transparent;
+  background: #ffffff;
   color: var(--text-primary);
   border: 2px solid var(--text-primary);
 }
@@ -629,6 +629,11 @@ section {
   color: #d7dbe1;
 }
 
+.contact-method span {
+  font-family: "Space Mono", "Courier New", monospace;
+  font-weight: 700;
+}
+
 .contact-method i {
   width: 20px;
   color: var(--primary-color);
@@ -669,6 +674,7 @@ section {
   border-radius: 4px;
   background: #0d0f12;
   color: #f3f4f5;
+  font-family: "Space Mono", "Courier New", monospace;
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
