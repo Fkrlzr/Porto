@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Simple validation
       if (!name || !email || !message) {
-        showNotification("Mohon isi semua field!", "error");
+        showNotification("Please fill in all fields!", "error");
         return;
       }
 
       // Simulate form submission
-      showNotification("Pesan berhasil dikirim! Terima kasih.", "success");
+      showNotification("Message sent successfully! Thank you.", "success");
       this.reset();
     });
   }

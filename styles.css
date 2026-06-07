@@ -100,6 +100,12 @@ h4 {
   color: var(--primary-color);
 }
 
+.nav-link:focus-visible {
+  color: var(--primary-color);
+  outline: 3px solid var(--primary-color);
+  outline-offset: 6px;
+}
+
 .nav-link::after {
   content: "";
   position: absolute;
@@ -112,6 +118,10 @@ h4 {
 }
 
 .nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:focus-visible::after {
   width: 100%;
 }
 
@@ -279,8 +289,15 @@ h4 {
   border: 2px solid transparent;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  min-width: 160px;
   box-shadow: 6px 6px 0 var(--shadow-strong);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
 }
 
 .btn-primary {
@@ -316,6 +333,12 @@ h4 {
   box-shadow: 8px 8px 0 var(--shadow-strong);
 }
 
+.btn-secondary:focus-visible,
+.btn-cv:focus-visible {
+  outline: 3px solid var(--text-primary);
+  outline-offset: 4px;
+}
+
 /* Social Links */
 .social-links {
   display: flex;
@@ -342,6 +365,13 @@ h4 {
   color: white;
   transform: translateY(-3px);
   box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+.social-link:focus-visible {
+  background: var(--primary-color);
+  color: white;
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
 }
 
 /* Hero Image */
@@ -470,6 +500,11 @@ section {
   box-shadow: 0 6px 20px var(--shadow-light);
 }
 
+.skill-item:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(47, 91, 255, 0.18);
+}
+
 /* Projects Section */
 .projects {
   background: var(--background-color);
@@ -515,6 +550,11 @@ section {
 }
 
 .project-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 12px 12px 0 var(--shadow-strong);
+}
+
+.project-card:focus-within {
   transform: translate(-3px, -3px);
   box-shadow: 12px 12px 0 var(--shadow-strong);
 }
@@ -588,6 +628,12 @@ section {
 
 .project-link:hover {
   color: var(--primary-color);
+}
+
+.project-link:focus-visible {
+  color: var(--primary-color);
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
 }
 
 /* Contact Section */
@@ -693,6 +739,12 @@ section {
   box-shadow: 0 0 0 3px rgba(93, 123, 255, 0.3);
 }
 
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
@@ -733,6 +785,11 @@ section {
 @media (max-width: 768px) {
   .hero-floats {
     right: 0;
+  }
+
+  /* Improve button sizing on tablet */
+  .hero-buttons .btn {
+    min-width: 140px;
   }
 
   .hamburger {
@@ -808,6 +865,35 @@ section {
 
   .hero-content h1 {
     font-size: 2.4rem;
+  }
+
+  /* Mobile: stack hero buttons and make them full width */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
+  }
+
+  /* Slightly smaller profile placeholder for small phones */
+  .profile-placeholder {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* Reduce vertical spacing on tight screens */
+  .section-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.75rem;
+  }
+
+  section {
+    padding: 60px 0;
   }
 
   .skill-grid {
